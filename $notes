@@ -1,0 +1,8 @@
+# grading:
+python grader/grade.py output/pred.txt example/answer.txt --verbose
+
+# build container
+docker build -t cse447-proj/demo -f Dockerfile .
+
+# running in docker
+docker run --rm -v %cd%/src:/job/src -v %cd%/work:/job/work -v %cd%/example:/job/data -v %cd%/output:/job/output cse447-proj/demo bash /job/src/predict.sh /job/data/input.txt /job/output/pred.txt

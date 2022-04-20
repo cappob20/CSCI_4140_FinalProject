@@ -1,5 +1,8 @@
 # Final Project: Option 2
-The goal of this project was to create a program that will predict the next 3 characters in a sentence using any language. The dataset has a maximum time limit of 30 minutes to load, and must contain multiple languages. After the user chooses the i​​th character, the system should choose the top 3 candidates for the (i ​ ​+ 1)th character as quickly as it can.
+<sup>Brianna Cappo (cappob20), Brandon Gammon (gammonb19), Alex Rowe (rowea20)</sup>
+
+The goal of this project was to create a program that will predict the next 3 characters in a sentence using any language. The dataset has a maximum time limit of 30 minutes to load, and must contain multiple languages. After the user chooses the i​​th character, the system should choose the top 3 candidates for the (i ​+ 1)th character as quickly as it can.
+We collected a dataset that contains the first chapter of *Harry Potter* in languages English, German, Russian and Spanish.
 
 ## Installation
 Install dependencies with `pip install`:
@@ -7,9 +10,8 @@ Install dependencies with `pip install`:
 * `tensorflow`
 
 ## Running
-Run `python FinalProject.py` from the root project directory to run the application
+For test mode run:
+`python src/runner.py test --work_dir work --test_data example/input.txt --test_output output/pred.txt`
 
-## Usage
-After starting the program, it will take about 25-30 minutes to train, depending on the specifications of the users computer.
-Once the program is finished training, it will prompt the user in the console to type in characters and then submit.
-Once it is submitted, the console will then print out the predicted next 3 characters.
+To train the model run:
+`python src/runner.py train --work_dir work`
